@@ -9,6 +9,23 @@
       <a mat-list-item routerLink="products">Products</a>
       <a mat-list-item routerLink="cart">Cart</a>
     </mat-nav-list>
+    <div id="filterContainer" *ngIf=" getRouterUrl() === '/products' " >
+      <h2>
+        Filter
+      </h2>
+      <div id="colorFilterContainer">
+        <p id="colorFilterTitle">
+          Colors to show
+        </p>
+        <mat-checkbox 
+          *ngFor="let color of colors_available"
+          (change) = "colorsToShowChanged(color)"
+          [checked]="true"
+        >
+            {{color}}
+        </mat-checkbox>
+      </div>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
