@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'colorCubesApp';
+
+  mobile : boolean =false;
+
+  ngOnInit() {
+    if (window.screen.width <= 360) {
+      this.mobile = true;
+    }else{
+      this.mobile = false;
+    }
+  }
 }
+

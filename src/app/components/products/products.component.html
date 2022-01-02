@@ -1,0 +1,17 @@
+<div id="productsList">
+    <mat-card class="productCard" *ngFor="let product of products, let i = index">
+        <mat-card-title>
+            {{product.name}}
+        </mat-card-title>
+        <mat-card-header>
+            <div class="imageHolder">
+                <img src="{{product.image}}">
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{product.description}}</p>
+        </mat-card-content>
+        
+        
+    </mat-card>
+</div>
