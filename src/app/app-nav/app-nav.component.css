@@ -29,3 +29,13 @@
 #colorFilterTitle{
   font-weight: 500;
 }
+#title{
+  align-self: center;
+}
+#topNavbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#titleDIV{
+}

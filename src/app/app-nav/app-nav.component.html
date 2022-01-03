@@ -20,7 +20,7 @@
         <mat-checkbox 
           *ngFor="let color of colors_available"
           (change) = "colorsToShowChanged(color)"
-          [checked]="true"
+          [checked]="false"
         >
             {{color}}
         </mat-checkbox>
@@ -28,7 +28,8 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar id="topNavbar" color="primary">
+      <div *ngIf="this.mobile == true"></div>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -37,7 +38,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>colorCubesApp</span>
+      <div id="titleDIV"><span id="title">ColorCubes</span></div>
+      <button mat-stroked-button (click)="goToPage('cart')">
+        Cart
+      </button>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>

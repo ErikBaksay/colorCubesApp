@@ -11,16 +11,16 @@
                 </mat-card-title>
                 <mat-card-header>
                     <div class="imageHolder">
-                        <img src="{{product.image}}">
+                        <img src="{{product.image}}" alt="Product Image">
                     </div>
                 </mat-card-header>
                 <mat-card-actions>
                     <div class="cardActionsContainer">
-                        <div style="align-self: flex-start;">
+                        <div class="priceDIV">
                             Price: {{product.price}}€
                         </div>
-                        <div style="align-self: flex-start;">
-                            Add to Cart
+                        <div class="addToCartDIV">
+                            <button mat-flat-button color="primary" (click)="addProductToCart(product.id)">Add to Cart</button>
                         </div>
                     </div>     
                 </mat-card-actions>          

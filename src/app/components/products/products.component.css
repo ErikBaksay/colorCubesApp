@@ -21,11 +21,36 @@ img{
     width: 100%;
 }
 .imageHolder{
-    width: 80%;
+    width: 100%;
 }
 .cardActionsContainer{
     margin: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    vertical-align: middle;
 }
+.priceDIV{
+    align-self: center;
+}
+.addToCartDIV{
+    align-self: center;
+}
+:host /deep/ .mat-card-header-text {
+    margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    mat-card{
+        margin: 1vw;
+        width: 36vw;
+    }
+    .cardActionsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    mat-card-title{
+        font-size: 1.3em;
+        min-height: 5vh;
+    }
+  }

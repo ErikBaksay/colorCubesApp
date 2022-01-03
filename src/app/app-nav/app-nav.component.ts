@@ -20,11 +20,16 @@ export class AppNavComponent {
 
   colors_available = colors_available
   colors_to_show = colors_to_show
+  mobile : boolean = false
 
   constructor(private breakpointObserver: BreakpointObserver,private router: Router) {}
 
   getRouterUrl(){
     return this.router.url    
+  }
+
+  goToPage(page:any){
+    this.router.navigate([page])
   }
 
   colorsToShowChanged(color:string){
@@ -35,6 +40,14 @@ export class AppNavComponent {
       colors_to_show.push(color)
     }
     console.log(colors_to_show)
+  }
+
+  ngOnInit(): void {
+    if (window.screen.width <= 360) {
+      this.mobile = true;
+    }else{
+      this.mobile = false;
+    }
   }
 
 }

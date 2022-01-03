@@ -1,10 +1,28 @@
 <div id="container">
-    <mat-card>
-        <mat-card-title>
-            Cart
-        </mat-card-title>
-        <mat-card-content>
-            These are the items in your shopping cart.
-        </mat-card-content>
-    </mat-card>
+    <h1 id="cartTitle">Cart</h1>
+    <ng-container *ngFor="let product of products, let i = index">
+        <mat-card *ngIf="items_in_cart.includes(product.id)">
+            <mat-card-content class="itemCardContent">
+                <div class="content">
+                    <div class="amount">
+                        {{amounts_in_cart[items_in_cart.indexOf(product.id)]}}x
+                    </div>
+                    <div class="image">
+                        <img class="productIMG" src="{{product.image}}" alt="Product Image">
+                    </div>
+                    <div class="name">
+                        {{product.name}}
+                    </div>
+                </div>
+                <div class="delete">
+                    <button mat-stroked-button color="warn" (click)="deleteProductFromCart(product.id)">
+                        X
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </ng-container>
+    <div id="emptyCart" *ngIf="items_in_cart.length == 0">
+        <p>Your cart is empty.</p>
+    </div>
 </div>
