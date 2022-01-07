@@ -2,7 +2,8 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 #welcome{
@@ -11,12 +12,67 @@
     font-size: 3em;
     line-height: 1em;
 }
-#welcomePageContent{
+#welcomeSection{
+    height: 30%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: #e0e0e0 solid 1px;
 }
 #welcomePageContent button{
     width: fit-content;
 }
+#mostPopularTitle{
+    margin-top: 3vh;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+#mostPopularProducts{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+mat-card{
+    margin: 1vw;
+    width: 18vw;
+    height: fit-content;
+}
+img{
+    width: 100%;
+}
+.imageHolder{
+    width: 100%;
+}
+.cardActionsContainer{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+.priceDIV{
+    align-self: center;
+}
+.addToCartDIV{
+    align-self: center;
+}
+:host /deep/ .mat-card-header-text {
+    margin: 0;
+}
+@media only screen and (max-width: 1200px) {
+    mat-card{
+        margin: 1vw;
+        width: 36vw;
+    }
+    .cardActionsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    mat-card-title{
+        font-size: 1.3em;
+        min-height: 5vh;
+    }
+  }
