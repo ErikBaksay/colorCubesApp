@@ -34,7 +34,6 @@ export class ProductsComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-
     for(var product of products){
       if (!(colors_available.includes(product.color))){
         colors_available.push(product.color)

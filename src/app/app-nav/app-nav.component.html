@@ -20,7 +20,7 @@
         <mat-checkbox 
           *ngFor="let color of colors_available"
           (change) = "colorsToShowChanged(color)"
-          [checked]="false"
+          [checked]="colors_to_show.includes(color)"
         >
             {{color}}
         </mat-checkbox>
