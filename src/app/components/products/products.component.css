@@ -40,10 +40,10 @@ img{
     margin: 0;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 780px) {
     mat-card{
         margin: 1vw;
-        width: 36vw;
+        width: 20vw;
     }
     .cardActionsContainer{
         display: flex;
@@ -52,5 +52,11 @@ img{
     mat-card-title{
         font-size: 1.3em;
         min-height: 5vh;
+    }
+  }
+@media only screen and (max-width: 480px) {
+    mat-card{
+        margin: 1vw;
+        width: 36vw;
     }
   }

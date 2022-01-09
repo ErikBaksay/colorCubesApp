@@ -15,6 +15,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { DialogEmptyCartComponent } from './dialog-empty-cart/dialog-empty-cart.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     ProductsComponent,
     CartComponent,
-    AppNavComponent
+    AppNavComponent,
+    CheckoutComponent,
+    DialogEmptyCartComponent
   ],
   imports: [
     BrowserModule,
