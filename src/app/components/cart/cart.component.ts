@@ -15,6 +15,9 @@ export class CartComponent implements OnInit {
   products = products
   items_in_cart = items_in_cart
   amounts_in_cart = amounts_in_cart
+  newValue = 0
+
+  mobile : boolean =false;
 
   constructor( private router: Router, public dialog : MatDialog ) { }
 
@@ -29,7 +32,26 @@ export class CartComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+  changedAmount(id:number,higherOrLower : string){
+    if (amounts_in_cart[id] >= 1){
+      if (higherOrLower == '+'){
+        amounts_in_cart[id] = amounts_in_cart[id] + 1
+      }
+      else{
+        amounts_in_cart[id] = amounts_in_cart[id] - 1
+      }
+    }
+    if (amounts_in_cart[id] == 0){
+      amounts_in_cart.splice(id,1)
+      items_in_cart.splice(id,1)
+    }    
   }
 
+  ngOnInit(): void {
+    if (window.screen.width <= 480) {
+      this.mobile = true;
+    }else{
+      this.mobile = false;
+    }
+  }
 }

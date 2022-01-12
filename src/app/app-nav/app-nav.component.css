@@ -39,6 +39,9 @@
 #titleDIV{
   font-weight: bold;
 }
+#titleDIV:hover{
+  cursor: pointer;
+}
 #cartButton{
   position: absolute;
   right: 2%;

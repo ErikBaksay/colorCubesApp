@@ -4,9 +4,18 @@
         <mat-card *ngIf="items_in_cart.includes(product.id)">
             <mat-card-content class="itemCardContent">
                 <div class="content">
-                    <div class="amount">
-                        {{amounts_in_cart[items_in_cart.indexOf(product.id)]}}x
+                    <div class="amountDIV" *ngIf="mobile==false">
+                        <button mat-flat-button class="raiseAmount" (click)="changedAmount(items_in_cart.indexOf(product.id),'-')">
+                            -
+                        </button>
+                        <div class="amount">
+                            {{amounts_in_cart[items_in_cart.indexOf(product.id)]}}x
+                        </div>
+                        <button mat-flat-button class="lowerAmount" (click)="changedAmount(items_in_cart.indexOf(product.id),'+')">
+                            +
+                        </button>
                     </div>
+                    
                     <div class="image">
                         <img class="productIMG" src="{{product.image}}" alt="Product Image">
                     </div>
@@ -14,6 +23,19 @@
                         {{product.name}}
                     </div>
                 </div>
+
+                <div class="amountDIV" *ngIf="mobile==true">
+                    <button mat-flat-button class="raiseAmount" (click)="changedAmount(items_in_cart.indexOf(product.id),'-')">
+                        -
+                    </button>
+                    <div class="amount">
+                        {{amounts_in_cart[items_in_cart.indexOf(product.id)]}}x
+                    </div>
+                    <button mat-flat-button class="lowerAmount" (click)="changedAmount(items_in_cart.indexOf(product.id),'+')">
+                        +
+                    </button>
+                </div>
+
                 <div class="delete">
                     <button mat-stroked-button color="warn" (click)="deleteProductFromCart(product.id)">
                         X

@@ -1,0 +1,71 @@
+#container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#formsDIV{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+}
+mat-form-field{
+    width: 45%;
+}
+.smallerForm{
+    width: 30%;
+}
+#paymentForms{
+    text-align: center;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+.paymentForm{
+    width: 8vw;
+    height: 4vw;
+}
+.paymentForm:hover{
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+.paymentForm mat-card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.paymentMethodActive{
+    background-color: #EBEBEB;
+}
+#total{
+    margin-top: 2vh;
+}
+#continue{
+    margin-bottom: 5vh;
+}
+#itemsInCartTitle{
+    font-weight: bold;
+}
+#shippingInformationTitle{
+    margin-top: 5vh;    
+}
+@media only screen and (max-width: 480px) {
+    #paymentForms{
+        width: 90%;
+    }
+    #formsDIV{
+        width: 90%;
+    }
+    .paymentForm{
+        width: 18vw;
+        height: 9vw;
+    }
+}

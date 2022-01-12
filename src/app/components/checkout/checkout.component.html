@@ -1,1 +1,82 @@
-<p>checkout works!</p>
+<div id="container">
+    
+    <h1 id="shippingInformationTitle">Shipping Information</h1>
+
+    <div id='formsDIV'>
+        <mat-form-field appearance="standard">
+            <mat-label>First Name</mat-label>
+            <input placeholder="First Name" matInput [formControl]="FirstName" required>
+            <mat-error *ngIf="FirstName.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Last Name</mat-label>
+            <input placeholder="Last Name" matInput [formControl]="LastName" required>
+            <mat-error *ngIf="LastName.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="example@example.com" [formControl]="Email" required>
+            <mat-error *ngIf="Email.invalid">{{getErrorMessageMail()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="example@example.com" [formControl]="PhoneNumber" required>
+            <mat-error *ngIf="PhoneNumber.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Street Address</mat-label>
+            <input matInput required [formControl]="StreetAddress" required>
+            <mat-error *ngIf="StreetAddress.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>City/Town</mat-label>
+            <input matInput required [formControl]="CityTown" required>
+            <mat-error *ngIf="CityTown.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard" class="smallerForm">
+            <mat-label>Postcode</mat-label>
+            <input matInput required [formControl]="Postcode" required>
+            <mat-error *ngIf="Postcode.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard" class="smallerForm">
+            <mat-label>Country</mat-label>
+            <input matInput required [formControl]="Country" required>
+            <mat-error *ngIf="Country.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard" class="smallerForm">
+            <mat-label>State/County</mat-label>
+            <input matInput required [formControl]="StateCounty" required>
+            <mat-error *ngIf="StateCounty.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+
+    <h1>Payment Method</h1>
+
+    <div id="paymentForms">
+        <mat-card class="paymentForm" (click)="changePaymentMethod('PayPal')" [ngClass]="{'paymentMethodActive' : paymentMethod == 'PayPal'}">
+            <mat-card-content>
+                PayPal
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="paymentForm" (click)="changePaymentMethod('Card')" [ngClass]="{'paymentMethodActive' : paymentMethod == 'Card'}">
+            <mat-card-content>
+                Card
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="paymentForm" (click)="changePaymentMethod('Bank Transfer')" [ngClass]="{'paymentMethodActive' : paymentMethod == 'Bank Transfer'}">
+            <mat-card-content>
+                Bank Transfer
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <p id="itemsInCartTitle">Items in cart:</p>
+    <p *ngFor="let item of items_in_cart, let i = index">{{amounts_in_cart[i]}} x {{products[item].name}}</p>
+
+    <h1 id="total">Total: {{cartTotal()}}€</h1>
+
+    <button id="continue" mat-flat-button disabled>
+        Continue
+    </button>
+
+</div>
