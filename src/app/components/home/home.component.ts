@@ -20,6 +20,14 @@ export class HomeComponent implements OnInit {
     this.router.navigate([page])
   }
 
+  mostPopular(){
+    if (window.screen.width <= 480) {
+      return [1,9,12,8]
+    }else{
+      return [1,9,12]
+    }
+  }
+
   addProductToCart(id:number){
     if (items_in_cart.includes(id)){
       let indexOfItem = items_in_cart.indexOf(id)

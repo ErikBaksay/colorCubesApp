@@ -5,7 +5,7 @@
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: center;    
+justify-content: space-evenly;  
 height: fit-content;
 width: fit-content;
 background-color: #ffffff;
@@ -21,6 +21,7 @@ mat-card{
     margin: 1vw;
     width: 18vw;
     border-radius: 16px;
+    margin-top: 2vh;
     box-shadow: 4px 10px 0 rgb(0 0 0 / 5%)
 }
 img{
@@ -56,7 +57,6 @@ img{
 }
 @media only screen and (max-width: 780px) {
     mat-card{
-        margin: 1vw;
         width: 20vw;
     }
     .cardActionsContainer{
@@ -66,11 +66,12 @@ img{
     mat-card-title{
         font-size: 1.3em;
         min-height: 5vh;
+        margin-top: 1vh;
     }
   }
 @media only screen and (max-width: 480px) {
     mat-card{
-        margin: 1vw;
         width: 36vw;
+        margin-top: 0.5vh;
     }
   }
