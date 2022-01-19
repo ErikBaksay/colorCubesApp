@@ -1,3 +1,6 @@
+*{
+    color:#454545; 
+}
 #container{
     height: 90%;
     width: 100%;
@@ -5,10 +8,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: #ffffff;
 }
 #welcome{
     text-align: center;   
-    font-weight: 800;
+    font-weight: 700;
     font-size: 3em;
     line-height: 1em;
 }
@@ -19,15 +23,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: #e0e0e0 solid 1px;
+    border-bottom: #DDDDDD solid 1px;
 }
-#welcomePageContent button{
+#showAllProductsButton{
     width: fit-content;
+    border-radius: 16px;
+
+
 }
 #mostPopularTitle{
     margin-top: 3vh;
     font-size: 1.7em;
-    font-weight: bold;
+    font-weight: 700;
 }
 #mostPopularProducts{
     height: 50vh;
@@ -40,6 +47,8 @@ mat-card{
     margin: 1vw;
     width: 18vw;
     height: fit-content;
+    border-radius: 16px;
+    box-shadow: 4px 10px 0 rgb(0 0 0 / 5%)
 }
 img{
     width: 100%;
@@ -59,6 +68,9 @@ img{
 }
 .addToCartDIV{
     align-self: center;
+}
+.addToCartDIV button{
+    border-radius: 16px;
 }
 :host /deep/ .mat-card-header-text {
     margin: 0;

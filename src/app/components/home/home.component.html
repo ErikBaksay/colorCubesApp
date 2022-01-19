@@ -1,7 +1,7 @@
 <div id="container">
     <div id="welcomeSection">
         <h1 id="welcome">Welcome to ColorCubes !</h1>
-        <button mat-flat-button color="primary" (click)="goToPage('products')">
+        <button id="showAllProductsButton" mat-stroked-button (click)="goToPage('products')">
             Show all products
         </button>
     </div>
@@ -24,7 +24,7 @@
                         Price: {{products[id-1].price}}€
                     </div>
                     <div class="addToCartDIV">
-                        <button mat-flat-button color="primary" (click)="addProductToCart(products[id-1].id)">Add to Cart</button>
+                        <button mat-stroked-button (click)="addProductToCart(products[id-1].id)">Add to Cart</button>
                     </div>
                 </div>     
             </mat-card-actions>          

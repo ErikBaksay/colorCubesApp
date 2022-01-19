@@ -1,3 +1,6 @@
+*{
+    color: #454545
+}
 #container{
     width: 100%;
     height: fit-content;
@@ -5,6 +8,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #ffffff;
 }
 #formsDIV{
     display: flex;
@@ -30,6 +34,7 @@ mat-form-field{
 .paymentForm{
     width: 8vw;
     height: 4vw;
+    border-radius: 16px;
 }
 .paymentForm:hover{
     background-color: #F5F5F5;
@@ -50,6 +55,7 @@ mat-form-field{
 }
 #continue{
     margin-bottom: 5vh;
+    border-radius: 16px;
 }
 #itemsInCartTitle{
     font-weight: bold;
