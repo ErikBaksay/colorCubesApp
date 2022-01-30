@@ -22,7 +22,13 @@ export class CartComponent implements OnInit {
   constructor( private router: Router, public dialog : MatDialog ) { }
 
   deleteProductFromCart(id:number){
-    items_in_cart.splice(items_in_cart.indexOf(id),1)
+    console.log(items_in_cart)
+    console.log(amounts_in_cart)
+    let item_in_cart = items_in_cart.indexOf(id)
+    items_in_cart.splice(item_in_cart,1)
+    amounts_in_cart.splice(item_in_cart,1)
+    console.log(items_in_cart)
+    console.log(amounts_in_cart)
   }
 
   goToCheckout(){

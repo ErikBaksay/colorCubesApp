@@ -46,6 +46,7 @@
 mat-card{
     margin: 1vw;
     width: 18vw;
+    height: fit-content;
     border-radius: 16px;
     margin-top: 2vh;
     box-shadow: 4px 10px 0 rgb(0 0 0 / 5%)
@@ -78,6 +79,9 @@ img{
 @media only screen and (max-width: 1200px) {
     mat-card{
         width: 36vw;
+    }
+    mat-card-title{
+        min-height: 5vh;
     }
     .cardActionsContainer{
         display: flex;

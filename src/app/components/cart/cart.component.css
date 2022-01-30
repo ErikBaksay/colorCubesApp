@@ -102,7 +102,6 @@ mat-card{
     .content{
         height: 60%;
         width: 100%;
-        background-color: #F5F5F5;
         border-radius: 5px;
         display: flex;
         flex-direction: row;
