@@ -11,12 +11,11 @@ export class AppComponent {
   mobile : boolean =false;
 
   ngOnInit() {
-    if (window.screen.width <= 360) {
+    if (window.screen.width <= 480) {
       this.mobile = true;
     }else{
       this.mobile = false;
     }
-    
   }
 }
 

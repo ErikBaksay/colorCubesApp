@@ -71,7 +71,7 @@
     </div>
 
     <p id="itemsInCartTitle">Items in cart:</p>
-    <p *ngFor="let item of items_in_cart, let i = index">{{amounts_in_cart[i]}} x {{products[item].name}}</p>
+    <p *ngFor="let item of items_in_cart, let i = index">{{amounts_in_cart[i]}} x {{products[item-1].name}}</p>
 
     <h1 id="total">Total: {{cartTotal()}}€</h1>
 
