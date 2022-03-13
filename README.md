@@ -1,4 +1,4 @@
-ColorCubes is a eShop created in Angular.
+ColorCubes is an online store created in Angular.
 It was created using Angular, Material Design, HTML, CSS and TypeScript
 
 You can view it here: https://erikbaksay.github.io/color-cubes-app/
